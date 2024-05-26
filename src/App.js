@@ -10,7 +10,8 @@ import { checkAutoLogin } from './services/AuthService';
 import { isAuthenticated } from './store/selectors/AuthSelectors';
 
 import "./css/style.css";
-
+import "./css/frontend.css";
+import "./css/responsive.css";
 
 
 const SignUp = lazy(() => import('./jsx/pages/Registration'));
@@ -45,6 +46,17 @@ function App (props) {
       useEffect(() => {
         checkAutoLogin(dispatch, navigate);    
       }, []);
+
+      const location = useLocation();
+      // Check if the current page is a frontend page
+    const isFrontendPage = location.pathname.startsWith('/web');
+
+    // Apply the appropriate CSS class to the body element
+    if (isFrontendPage) {
+        document.body.classList.add('frontend-body');
+    } else {
+        document.body.classList.remove('frontend-body');
+    }
     
     let routeblog = (         
       <Routes>   

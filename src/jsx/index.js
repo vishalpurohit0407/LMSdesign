@@ -128,6 +128,11 @@ import Error404 from "./pages/Error404";
 import Error500 from "./pages/Error500";
 import Error503 from "./pages/Error503";
 
+//Web Pages
+import Landing from "./frontend/web_pages/Home";
+import ParticipentLoginFrm from "./frontend/web_pages/ParticipantLogin";
+
+
 import { ThemeContext } from "../context/ThemeContext";
 
 
@@ -264,7 +269,9 @@ const Markup = () => {
               <Route path='/page-error-403' element={<Error403/>} />
               <Route path='/page-error-404' element={<Error404/>} />
               <Route path='/page-error-500' element={<Error500/>} />
-              <Route path='/page-error-503' element={<Error503/>} />     
+              <Route path='/page-error-503' element={<Error503/>} /> 
+              <Route path='/web/landing' element={ <Landing /> }  />  
+              <Route path='/web/login' element={ <ParticipentLoginFrm /> }  />    
               <Route  element={<MainLayout />} > 
                   {allroutes.map((data, i) => (
                     <Route
