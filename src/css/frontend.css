@@ -8,7 +8,12 @@ h4{font-size: 24px; font-weight: 600; line-height: 32px; letter-spacing: 0.002em
 h5{font-size: 18px; line-height: 26px; color: #082758; font-weight: 500;}
 h6{font-size: 16px; line-height: 26px; color: #393939; font-weight: 600;}
 p{line-height: 24px;}
+.form-group{margin-bottom: 20px;}
+.form-group label{font-size: 16px; line-height: 22px; font-weight: 500; color: #082758; margin-bottom: 10px;}
+.form-control{color: #6D737A; border-radius: 8px; font-size: 16px; font-weight: 500; height: auto; border-color: #C3C2B8; padding: 11px 16px;}
+.form-control:focus{border-color: #393939;}
 a ,button{ text-decoration: none; border: none; outline: none; transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
+a:focus, a:hover{color: #008FCC;}
 .theme-btn{border-radius: 16px; color: #fff; font-weight: 500; font-size: 16px; line-height: 24px; background: #008FCC;  padding: 11px 22px; box-shadow: 0px 85px 80px 0px #008FCC14;}
 .btn10{border: 1px solid transparent; position: relative; overflow: hidden!important; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; 
     transition: all .3s ease-in-out;  z-index:10;}
@@ -21,6 +26,11 @@ a ,button{ text-decoration: none; border: none; outline: none; transition: all 0
     transition: all .4s cubic-bezier(.2,.95,.57,.99); box-shadow: 2px 0px 14px rgba(0,0,0,.6);}
 .btn10:hover::before, .btn1O:hover::before{ opacity:1; width: 116%;}
 .btn10:hover::after, .btn1O:hover::after{ opacity:1; width: 120%;}
+.social-link{display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; column-gap: 10px; margin-bottom: 40px;}
+.social-link ul{column-gap: 10px;}
+.social-link ul li a{background-color: #F4F4F4; border-radius: 10px; width: 56px; height: 56px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; 
+  -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+.google-btn{background-color: #E9F1FF; width: 100%; max-width: 320px; border-radius: 10px; padding: 15px 25px; font-size: 16px; line-height: 24px; color: #4285F4; font-weight: 400;}
 @keyframes pulse-me {
   0% {
     transform: scale(0.5);
@@ -39,6 +49,27 @@ a ,button{ text-decoration: none; border: none; outline: none; transition: all 0
     transform: scale(1);
     opacity: 0;
   }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #828282 !important;
+  filter: alpha(opacity=0.32);
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #828282 !important;
+  filter: alpha(opacity=0.32);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #828282 !important;
+  filter: alpha(opacity=0.32);
+}
+
+::placeholder {
+  color: #828282 !important;
+  filter: alpha(opacity=0.32);
+
 }
 
 /* Star Rating */
@@ -68,6 +99,19 @@ a ,button{ text-decoration: none; border: none; outline: none; transition: all 0
 .switches-container input:nth-of-type(1):checked~.switch-wrapper .switch div:nth-of-type(1) {opacity: 1;}
 .switches-container input:nth-of-type(2):checked~.switch-wrapper .switch div:nth-of-type(2) { opacity: 1;}
 /* End Toggle Button */
+
+/* Checkbox */
+.common-chkbox {display: block; position: relative; padding-left: 36px; margin-bottom: 0px; cursor: pointer; text-transform: none !important; line-height: 24px; color: #6D737A; -webkit-user-select: none; 
+  -moz-user-select: none; -ms-user-select: none; user-select: none; font-size: 16px; font-weight: 400;}
+.common-chkbox input {position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
+.chkmark {position: absolute; top: 0px; left: 0; height: 26px !important; width: 26px; background-color: transparent; border: 1px solid #008FCC; border-radius: 4px; -webkit-transition: all 0.5s ease;-o-transition: all 0.5s ease;
+  transition: all 0.5s ease;}
+.chkmark:after {content: ""; position: absolute; display: none;}
+.common-chkbox input:checked ~ .chkmark:after {display: block;}
+.common-chkbox .chkmark:after{left: 8px; top: 2px; width: 8px;height: 15px; border: solid white;border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); background: transparent;
+  -webkit-transition: all 0.5s ease;-o-transition: all 0.5s ease; transition: all 0.5s ease;}
+.common-chkbox input:checked ~ .chkmark {background-color: #008FCC; border-color: #008FCC;}
+/* End */
 
 /* Web Site Fonts */
 @font-face {
@@ -299,6 +343,12 @@ a ,button{ text-decoration: none; border: none; outline: none; transition: all 0
   .najahna-right-arrow-icon:before {
     content: "\e926";
   }
+  .najahna-eye-fill-visible:before {
+    content: "\e927";
+  }
+  .najahna-eye-fill-unvisible:before {
+    content: "\e928";
+  }
 /* End Custom Icons */ 
 
 /* Start Header CSS */
@@ -459,6 +509,15 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .participant-login .login-desc p{color: #fff;}
 .participant-login form .title{text-align: center;}
 .participant-login .login-frm{max-width: 495px; margin-left: auto;}
+.participant-login .login-frm h2.title{margin-bottom: 30px;}
+.participant-login .login-frm .theme-btn{border-radius: 8px; width: 100%; box-shadow: none; border-color: #862234; background: #862234;}
+.participant-login .login-frm .theme-btn.btn10:hover span{color: #862234 !important;}
+.participant-login .login-frm .theme-btn + p{text-align: center; margin: 25px 0; color: #6D737A; font-weight: 500;}
+.participant-login .login-frm .social-link + p{color: #6D737A; font-weight: 400; margin: 0;  text-align: center;}
+.participant-login .login-frm .social-link + p a{font-weight: 600; color: #008FCC;}
+.participant-login .login-frm .position-relative .icon{position: absolute; right: 16px; top: 14px;}
+.participant-login .login-frm .position-relative .form-control{padding-right: 45px;}
+.participant-login .login-frm .position-relative .icon i{color: #000; font-size: 20px;}
 /* End Login Page CSS */
 
 /* Start Footer CSS */

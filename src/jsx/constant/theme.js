@@ -119,6 +119,10 @@ export const IMAGES = {
     TopTrainerImg7 : require('../../images/webimages/top-trainer7.png'),
     TopTrainerImg8 : require('../../images/webimages/top-trainer8.png'),
     LoginGraphics : require('../../images/webimages/login-graphics.png'),
+    GoogleIcon : require('../../images/webimages/google-icon.svg'),
+    FbFillIcon : require('../../images/webimages/facebook-fill-icon.svg'),
+    AppleFillIcon : require('../../images/webimages/apple-fill-icon.svg'),
+
     FooterLogo : require('../../images/webimages/footer-logo.png'),
 
     England : EngliandImg,
