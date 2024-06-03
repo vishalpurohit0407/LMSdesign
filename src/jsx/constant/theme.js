@@ -122,6 +122,7 @@ export const IMAGES = {
     GoogleIcon : require('../../images/webimages/google-icon.svg'),
     FbFillIcon : require('../../images/webimages/facebook-fill-icon.svg'),
     AppleFillIcon : require('../../images/webimages/apple-fill-icon.svg'),
+    ProfileImg : require('../../images/webimages/profile-img.png'),
 
     FooterLogo : require('../../images/webimages/footer-logo.png'),
 

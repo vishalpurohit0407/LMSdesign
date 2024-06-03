@@ -78,7 +78,7 @@ const ParticipantLogin =({classChange}) =>{
 									</div>
 									<div className="d-flex align-items-center justify-content-between pt-2 pb-4 mb-2">
 										<label class="common-chkbox">Remember me
-											<input type="checkbox" checked="checked" />
+											<input type="checkbox" />
 											<span class="chkmark"></span>
 										</label>
 										<a href="javascript:void(0)">Forgot Password ?</a>

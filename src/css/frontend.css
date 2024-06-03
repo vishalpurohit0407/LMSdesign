@@ -4,6 +4,7 @@
 .title span{color: #862234;}
 h1{font-size: 46px; line-height: 1.2; font-weight: bold; color: #082758;}
 h2{font-size: 42px; line-height: 50px; color: #000; font-weight: 600;}
+h3{font-size: 32px; line-height: 38px; color: #000; font-weight: 600;}
 h4{font-size: 24px; font-weight: 600; line-height: 32px; letter-spacing: 0.002em; }
 h5{font-size: 18px; line-height: 26px; color: #082758; font-weight: 500;}
 h6{font-size: 16px; line-height: 26px; color: #393939; font-weight: 600;}
@@ -349,6 +350,34 @@ a:focus, a:hover{color: #008FCC;}
   .najahna-eye-fill-unvisible:before {
     content: "\e928";
   }
+  .najahna-download-icon:before {
+    content: "\e929";
+    color: #008fcc;
+  }
+  .najahna-clock-icon:before {
+    content: "\e92a";
+    color: #862234;
+  }
+  .najahna-info-card-icon:before {
+    content: "\e92b";
+    color: #862234;
+  }
+  .najahna-repeat-icon:before {
+    content: "\e92c";
+    color: #fff;
+  }
+  .najahna-pie-chart-icon:before {
+    content: "\e92d";
+    color: #fff;
+  }
+  .najahna-saving-icon:before {
+    content: "\e92e";
+    color: #fff;
+  }
+  .najahna-profile-user-icon:before {
+    content: "\e92f";
+    color: #082758;
+  }
 /* End Custom Icons */ 
 
 /* Start Header CSS */
@@ -513,12 +542,60 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .participant-login .login-frm .theme-btn{border-radius: 8px; width: 100%; box-shadow: none; border-color: #862234; background: #862234;}
 .participant-login .login-frm .theme-btn.btn10:hover span{color: #862234 !important;}
 .participant-login .login-frm .theme-btn + p{text-align: center; margin: 25px 0; color: #6D737A; font-weight: 500;}
-.participant-login .login-frm .social-link + p{color: #6D737A; font-weight: 400; margin: 0;  text-align: center;}
 .participant-login .login-frm .social-link + p a{font-weight: 600; color: #008FCC;}
 .participant-login .login-frm .position-relative .icon{position: absolute; right: 16px; top: 14px;}
 .participant-login .login-frm .position-relative .form-control{padding-right: 45px;}
 .participant-login .login-frm .position-relative .icon i{color: #000; font-size: 20px;}
+
+.participant-login.instructor-login .inner-form{padding: 45px 15px 50px; box-shadow: 0px 4px 36px 0px #00000014; border-radius: 16px;}
+.participant-login.instructor-login .inner-form .login-frm{margin: 0 auto;}
 /* End Login Page CSS */
+
+/* Start Dashboard CSS */
+.main-dashboard{padding: 45px 10px 90px;}
+.main-dashboard .sidebar-menu{padding-top: 72px;}
+.main-dashboard .sidebar-menu .sidebar-profile{text-align: center; background-color: #F4F4F4; padding: 0px 10px 20px; border-radius: 15px; margin-bottom: 20px;}
+.main-dashboard .sidebar-menu .sidebar-profile span{display: inline-block; width: 170px; height: 170px; border-radius: 100%; border: 3px solid #082758; margin-top: -80px;}
+.main-dashboard .sidebar-menu .sidebar-profile span img{width: 100%; border-radius: 100%;}
+.main-dashboard .sidebar-menu .sidebar-profile h4{color: #082758; margin: 4px 0;}
+.main-dashboard .sidebar-menu .sidebar-profile label{color: #6C6C6C; font-size: 16px; font-weight: 500;}
+.main-dashboard .sidebar-menu h4.title{margin-bottom: 10px;}
+.main-dashboard .sidebar-menu .menus li:not(:last-child){margin-bottom: 10px;}
+.main-dashboard .sidebar-menu .menus li a.nav-link{display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 15px; 
+  padding: 14px 20px; border-radius: 12px; background-color: #F4F4F4; color: #008FCC; font-size: 18px; font-weight: 500;}
+.main-dashboard .sidebar-menu .menus li a.nav-link i{width: 30px; text-align: center; font-size: 22px; }
+.main-dashboard .sidebar-menu .menus li a.nav-link i:before{color: #082758;}
+.main-dashboard .sidebar-menu .menus li a.nav-link:hover,
+.main-dashboard .sidebar-menu .menus li a.nav-link.active{background-color: #862234; color: #fff;}
+.main-dashboard .sidebar-menu .menus li a.nav-link:hover i:before,
+.main-dashboard .sidebar-menu .menus li a.nav-link.active i:before{color: #FFC27A;}
+.main-dashboard .dashboard-title{background-color: #F4F4F4; border-radius: 12px; padding: 24px 35px; margin-bottom: 35px;}
+.main-dashboard .dashboard-title h3.title{margin: 0;}
+.main-dashboard .dashboard-count{padding-bottom: 40px;}
+.main-dashboard .dashboard-count .card{-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row; box-shadow: 4px 4px 10px 0px #0827581A; background-color: #fff; 
+  gap: 20px; border-radius: 12px; padding: 23px 20px;}
+.main-dashboard .dashboard-count .card span{width: 64px; height: 64px; font-size: 30px; background-color: #008FCC; border-radius: 100%;}
+.main-dashboard .dashboard-count .card label{margin-bottom: 5px; font-size: 16px; font-weight: 500; color: #6D737A;}
+.main-dashboard .dashboard-count .card h5{color: #862234; font-weight: bold; font-size: 20px;}
+
+.main-dashboard .assessment-summary .title{margin-bottom: 30px;}
+.global-table, .global-table table{border-radius: 25px 25px 0 0; border: none;}
+.global-table table thead tr{border: none;}
+.global-table table thead th{background-color: #082758; padding: 12px 20px; color: #fff; font-size: 15px; line-height: 20px; font-weight: 500; vertical-align: middle;}
+.global-table table thead th:first-child{border-radius: 25px 0 0 0;}
+.global-table table thead th:last-child{border-radius: 0 25px 0 0;}
+.global-table table tbody tr{border-color: #fff;}
+.global-table table tbody tr:last-child{border-bottom: none;}
+.global-table table tbody td{background-color: #F4F4F4; border-color: #fff; font-size: 13px; line-height: 18px; color: #6D737A; font-weight: 400; padding: 14px 20px;}
+.global-table table tbody tr:last-child td:first-child{border-radius: 0 0 0 25px;}
+.global-table table tbody tr:last-child td:last-child{border-radius: 0 0 25px 0;}
+.status.fail{color: #E91313;}
+.status.pass{color: #008FCC;}
+.badge{padding: 5px 15px; color: #fff; border-radius: 8px; font-weight: 500;}
+.badge.fail{background-color: #862234;}
+.badge.pass{background-color: #FFC27A; color: #082758;}
+.badge.details{background-color: #008FCC;}
+/* End Dashboard CSS */
 
 /* Start Footer CSS */
 footer .main-footer{background-color: #082758; padding: 35px 10px;}

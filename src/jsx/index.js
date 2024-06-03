@@ -131,7 +131,8 @@ import Error503 from "./pages/Error503";
 //Web Pages
 import Landing from "./frontend/web_pages/Home";
 import ParticipentLoginFrm from "./frontend/web_pages/ParticipantLogin";
-
+import InstructorLogin from "./frontend/web_pages/InstructorLogin";
+import Dashboard from "./frontend/web_pages/Dashboard";
 
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -271,7 +272,9 @@ const Markup = () => {
               <Route path='/page-error-500' element={<Error500/>} />
               <Route path='/page-error-503' element={<Error503/>} /> 
               <Route path='/web/landing' element={ <Landing /> }  />  
-              <Route path='/web/login' element={ <ParticipentLoginFrm /> }  />    
+              <Route path='/web/login' element={ <ParticipentLoginFrm /> }  /> 
+              <Route path='/web/instructor-login' element={ <InstructorLogin /> }  />
+              <Route path='/web/dashboard' element={ <Dashboard /> }  />    
               <Route  element={<MainLayout />} > 
                   {allroutes.map((data, i) => (
                     <Route
