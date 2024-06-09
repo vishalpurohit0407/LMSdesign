@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MainNavbar from '../web_components/nav/Header';
-import Sidebar from '../web_components/dashboard/Sidebar';
-import MyDashboard from '../web_components/dashboard/MyDashboard';
-import AssessmentSummary from '../web_components/dashboard/YourAssessmentSummary';
-import EnrolledCourses from '../web_components/dashboard/RecentlyEnrolledCourses';
-import Footer from '../web_components/footer/Footer';
+import MainNavbar from '../../web_components/nav/Header';
+import Sidebar from '../../web_components/participant/dashboard/Sidebar';
+import MyDashboard from '../../web_components/participant/dashboard/MyDashboard';
+import AssessmentSummary from '../../web_components/participant/dashboard/YourAssessmentSummary';
+import EnrolledCourses from '../../web_components/participant/dashboard/RecentlyEnrolledCourses';
+import Footer from '../../web_components/footer/Footer';
 
 const Dashboard = () => {
    return (

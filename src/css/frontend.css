@@ -9,7 +9,7 @@ h4{font-size: 24px; font-weight: 600; line-height: 32px; letter-spacing: 0.002em
 h5{font-size: 18px; line-height: 26px; color: #082758; font-weight: 500;}
 h6{font-size: 16px; line-height: 26px; color: #393939; font-weight: 600;}
 p{line-height: 24px;}
-.form-group{margin-bottom: 20px;}
+.form-group{margin-bottom: 30px;}
 .form-group label{font-size: 16px; line-height: 22px; font-weight: 500; color: #082758; margin-bottom: 10px;}
 .form-control{color: #6D737A; border-radius: 8px; font-size: 16px; font-weight: 500; height: auto; border-color: #C3C2B8; padding: 11px 16px;}
 .form-control:focus{border-color: #393939;}
@@ -32,6 +32,9 @@ a:focus, a:hover{color: #008FCC;}
 .social-link ul li a{background-color: #F4F4F4; border-radius: 10px; width: 56px; height: 56px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; 
   -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
 .google-btn{background-color: #E9F1FF; width: 100%; max-width: 320px; border-radius: 10px; padding: 15px 25px; font-size: 16px; line-height: 24px; color: #4285F4; font-weight: 400;}
+.theme-btn.red-theme-btn{background-color: #862234; border-radius: 8px;}
+.theme-btn.red-theme-btn.btn10:hover{color: #862234 !important;}
+
 @keyframes pulse-me {
   0% {
     transform: scale(0.5);
@@ -84,6 +87,17 @@ a:focus, a:hover{color: #008FCC;}
 .rating-group:hover .rating__label .rating__icon--star {color: #FFC27A;}
 .rating__input:hover ~ .rating__label .rating__icon--star {color: #ddd;}
 /* End Rating */
+
+/* Radiobutton */
+.custom-radio {display: block; position: relative; padding-left: 35px; font-size: 16px !important; font-weight: 500 !important; color: #6C6C6C !important; margin-bottom: 0px; cursor: pointer; text-transform: none !important; line-height: 30px !important; color: #6C6C6C; font-weight: 300; -webkit-user-select: none; 
+  -moz-user-select: none; -ms-user-select: none; user-select: none; margin-top: 0px;}
+.custom-radio input {position: absolute; opacity: 0; cursor: pointer; height: 25px; width: 25px; margin-right: auto; left: 0px; top: 3px;}
+.rdochkmark {position: absolute; top: 3px; left: 0; height: 25px !important; width: 25px; background-color: transparent; border: 2px solid #6D737A; border-radius: 100%; transition: all 0.5s ease;}
+.rdochkmark:after {content: ""; position: absolute; display: none;}
+.custom-radio input:checked ~ .rdochkmark:after {display: block; }
+.custom-radio .rdochkmark:after {top: 4px;left: 4px;width: 13px;height: 13px; border-radius: 50%; background: #862234; transition: all 0.5s ease;}
+.custom-radio input:checked ~ .rdochkmark {background-color: transparent; /*border-color: #00E376;*/}
+/* End */
 
 /* Toggle Button */
 .switches-container { width: 100%; max-width: 328px; display: -webkit-box;display: -ms-flexbox;display: flex; padding: 0; position: relative; 
@@ -505,7 +519,8 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .card .card-body .ratings span{color: #52565C;}
 .card .card-footer{padding: 14px 0 0;}
 .card .card-footer label{font-size: 22px; margin-bottom: 0; color: #1B1D1F; font-weight: 600;}
-.card .card-footer a{background-color: #fff; box-shadow: 0px 3px 12px 0px #4B4B4B21; border-radius: 8px; width: 50px; height: 50px; font-size: 30px; display: -webkit-inline-box; 
+.card .card-footer a,
+.main-dashboard .enrolled-courses .card .card-body a{background-color: #fff; box-shadow: 0px 3px 12px 0px #4B4B4B21; border-radius: 8px; width: 50px; height: 50px; font-size: 30px; display: -webkit-inline-box; 
   display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;  -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
   .card .card-footer a:focus{ box-shadow: 0px 3px 12px 0px #4B4B4B21 !important;}
 /* End Services CSS */
@@ -571,14 +586,41 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .main-dashboard .sidebar-menu .menus li a.nav-link.active i:before{color: #FFC27A;}
 .main-dashboard .dashboard-title{background-color: #F4F4F4; border-radius: 12px; padding: 24px 35px; margin-bottom: 35px;}
 .main-dashboard .dashboard-title h3.title{margin: 0;}
+.main-dashboard .dashboard-title a{font-size: 28px;}
 .main-dashboard .dashboard-count{padding-bottom: 40px;}
 .main-dashboard .dashboard-count .card{-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row; box-shadow: 4px 4px 10px 0px #0827581A; background-color: #fff; 
   gap: 20px; border-radius: 12px; padding: 23px 20px;}
 .main-dashboard .dashboard-count .card span{width: 64px; height: 64px; font-size: 30px; background-color: #008FCC; border-radius: 100%;}
 .main-dashboard .dashboard-count .card label{margin-bottom: 5px; font-size: 16px; font-weight: 500; color: #6D737A;}
 .main-dashboard .dashboard-count .card h5{color: #862234; font-weight: bold; font-size: 20px;}
+.main-dashboard .dashboard-count .card span i:before{color: #fff;}
 
 .main-dashboard .assessment-summary .title{margin-bottom: 30px;}
+.main-dashboard .enrolled-courses{padding-top: 50px;}
+.main-dashboard .enrolled-courses .courses-listing{padding: 10px 30px 30px; background-color: #F4F4F4; border-radius: 12px;}
+.main-dashboard .enrolled-courses .courses-listing .card{padding: 10px;}
+.main-dashboard .enrolled-courses .courses-listing .card .card-header{position: relative; -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+.main-dashboard .enrolled-courses .courses-listing .card .card-header label{position: relative; margin: -34px auto 0; bottom: 15px; background-color: #fff; display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex; gap: 5px; 
+  box-shadow: 0px 0px 8px 0px #0000001F; border-radius: 8px; padding: 5px 10px; }
+.main-dashboard .enrolled-courses .courses-listing .card-header label .new-price{font-size: 18px; font-weight: 600; color: #862234;}
+.main-dashboard .enrolled-courses .courses-listing .card-header label .old-price{font-size: 16px; text-decoration: line-through; font-weight: 400; color: #6D737A;}
+.main-dashboard .enrolled-courses .card .profile-details{gap: 10px;}
+.main-dashboard .enrolled-courses .card .profile-details .profile-icon{width: 48px; height: 48px; border-radius: 100%;}
+.main-dashboard .enrolled-courses .card .profile-details .profile-icon img{width: 100%; max-width: 48px; border-radius: 100%; border: 1px solid #082758;}
+.main-dashboard .enrolled-courses .card .profile-details h6{margin-bottom: 0; line-height: 20px;}
+.main-dashboard .enrolled-courses .card .profile-details .profile-desc span{font-size: 12px; line-height: 18px; font-weight: 500; color: #6C6C6C;}
+.main-dashboard .enrolled-courses .card .card-body{padding-bottom: 0;}
+.main-dashboard .enrolled-courses .card .card-body a{width: 40px; height: 40px; font-size: 24px;}
+.main-dashboard .enrolled-courses .card .card-body p{font-size: 14px; line-height: 18px; color: #6D737A; display: -webkit-box;
+  -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px;}
+.main-dashboard .enrolled-courses .card .course-duration{border-top: 1px solid #E7E9EB; padding: 6px 0;}
+.main-dashboard .enrolled-courses .card .course-duration label{font-size: 12px; font-weight: 500; color: #008FCC; line-height: 20px;}
+.main-dashboard .enrolled-courses .card .course-duration label i{font-size: 20px; vertical-align: middle; margin-right: 10px;}
+.main-dashboard .enrolled-courses .card .card-footer label{font-size: 18px;}
+.main-dashboard .enrolled-courses .card .card-footer span{font-size: 15px; color: #E91313;}
+
+/* Star Table CSS */
+.global-table{margin-bottom: 0;}
 .global-table, .global-table table{border-radius: 25px 25px 0 0; border: none;}
 .global-table table thead tr{border: none;}
 .global-table table thead th{background-color: #082758; padding: 12px 20px; color: #fff; font-size: 15px; line-height: 20px; font-weight: 500; vertical-align: middle;}
@@ -595,9 +637,45 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .badge.fail{background-color: #862234;}
 .badge.pass{background-color: #FFC27A; color: #082758;}
 .badge.details{background-color: #008FCC;}
-/* End Dashboard CSS */
+.global-table .pagination{margin-bottom: 0; gap: 10px;}
+.global-table .pagination ul li:first-child a,
+.global-table .pagination ul li:last-child a{border: none; border-radius: 0; width: auto !important; height: auto m !important; color: #082758; font-size: 15px; font-weight: 500;}
+.global-table .pagination ul li:first-child a:hover,
+.global-table .pagination ul li:last-child a:hover{background-color: transparent !important;}
+.global-table .pagination .page-item .page-link span,
+.global-table .pagination ul li span{color: #082758; font-size: 15px; font-weight: 500;}
+.global-table .pagination.pagination-sm .page-item .page-link{width: 40px; margin: 0; color: #082758; font-size: 15px; font-weight: 500; height: 40px; border: none; border-radius: 10px;}
+.global-table .pagination.pagination-sm .page-item span.page-link,
+.global-table .pagination.pagination-sm .page-item .page-link:hover{background-color: #862234; color: #fff;}
+.global-table .pagination ul li:first-child a:hover span,
+.global-table .pagination ul li:last-child a:hover span{color: #FFC27A !important;}
+/* End Table CSS */
 
-/* Start Footer CSS */
+/*=== End Dashboard CSS ===*/
+
+/*=== Start My Profile CSS ===*/
+.my-profile{padding: 30px; border-radius: 12px; background-color: #F4F4F4;}
+.my-profile h4{font-size: 20px; line-height: 28px; font-weight: 600; color: #082758; margin-bottom: 28px;}
+.my-profile .form-group label{font-size: 18px;}
+.my-profile .form-group .f-input{position: relative;}
+.my-profile .form-group .fileUpload { position: absolute; right: 0; top: 0px; overflow: hidden;}
+.my-profile .form-group .fileUpload input.upload {position: absolute; top: 0px; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0);}
+.my-profile .form-group .btn--browse{border: none; font-size: 16px;  border-left: 0;border-radius: 0 8px 8px 0; background-color: #c3c2b84d; color: #828282; height: 48px;padding: 12px 14px;}
+.my-profile .form-group .btn--browse:hover{background-color: #c3c2b833;}
+.my-profile.edit-profile h4{margin-bottom: 8px;}
+.avtar-section{padding: 18px 30px; border-radius: 12px; background-color: #F4F4F4; margin-bottom: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; 
+  -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
+.avtar-section .profile-details{gap: 20px;}
+.avtar-section .profile-details .profile-icon{width: 120px; height: 120px; border-radius: 100%;}
+.avtar-section .profile-details .profile-icon img{width: 100%; max-width: 120px; border-radius: 100%; border: 2px solid #082758;}
+.avtar-section h4{margin-bottom: 10px;}
+.avtar-section p{font-size: 16px; color: #6D737A; margin-bottom: 0;}
+.avtar-section .action-btn{gap: 20px;}
+.avtar-section .action-btn a{display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; 
+  box-shadow: 0px 2px 16px 0px #00000014; width: 70px; height: 70px; background-color: #fff; border-radius: 16px; font-size: 28px;}
+/*=== End My Profile CSS ===*/
+
+/*=== Start Footer CSS ===*/
 footer .main-footer{background-color: #082758; padding: 35px 10px;}
 footer .main-footer h4{color: #fff; margin-bottom: 0;}
 footer .main-footer ul{margin-top: 25px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; gap: 15px;}
@@ -616,6 +694,8 @@ footer .main-footer .subscribe p{margin-top: 25px; color: #fff;}
 footer .copyright{background-color: #fff; padding: 15px 10px;}
 footer .copyright p{font-size: 14px; line-height: 20px; color: #000000; margin: 0;}
 /* End Footer CSS */
+
+
 
 
 

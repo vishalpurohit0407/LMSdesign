@@ -130,9 +130,15 @@ import Error503 from "./pages/Error503";
 
 //Web Pages
 import Landing from "./frontend/web_pages/Home";
-import ParticipentLoginFrm from "./frontend/web_pages/ParticipantLogin";
-import InstructorLogin from "./frontend/web_pages/InstructorLogin";
-import Dashboard from "./frontend/web_pages/Dashboard";
+import ParticipentLoginFrm from "./frontend/web_pages/participant/ParticipantLogin";
+import InstructorLogin from "./frontend/web_pages/instructor/InstructorLogin";
+import InsDashboard from "./frontend/web_pages/instructor/Dashboard";
+import InsMyProfile from "./frontend/web_pages/instructor/MyProfile";
+import InsEditProfile from "./frontend/web_pages/instructor/EditProfile";
+import PartDashboard from "./frontend/web_pages/participant/Dashboard";
+import PartMyProfile from "./frontend/web_pages/participant/MyProfile";
+import PartEditProfile from "./frontend/web_pages/participant/EditProfile";
+
 
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -271,10 +277,15 @@ const Markup = () => {
               <Route path='/page-error-404' element={<Error404/>} />
               <Route path='/page-error-500' element={<Error500/>} />
               <Route path='/page-error-503' element={<Error503/>} /> 
-              <Route path='/web/landing' element={ <Landing /> }  />  
-              <Route path='/web/login' element={ <ParticipentLoginFrm /> }  /> 
-              <Route path='/web/instructor-login' element={ <InstructorLogin /> }  />
-              <Route path='/web/dashboard' element={ <Dashboard /> }  />    
+              <Route path='/web' element={ <Landing /> }  />  
+              <Route path='/web/instructor/login' element={ <InstructorLogin /> }  />
+              <Route path='/web/instructor/dashboard' element={ <InsDashboard /> }  />
+              <Route path='/web/instructor/my-profile' element={ <InsMyProfile /> }  />
+              <Route path='/web/instructor/edit-profile' element={ <InsEditProfile /> }  /> 
+              <Route path='/web/participent/login' element={ <ParticipentLoginFrm /> }  /> 
+              <Route path='/web/participent/dashboard' element={ <PartDashboard /> }  /> 
+              <Route path='/web/participent/my-profile' element={ <PartMyProfile /> }  />
+              <Route path='/web/participent/edit-profile' element={ <PartEditProfile /> }  />    
               <Route  element={<MainLayout />} > 
                   {allroutes.map((data, i) => (
                     <Route

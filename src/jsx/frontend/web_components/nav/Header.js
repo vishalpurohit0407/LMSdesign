@@ -14,6 +14,19 @@ import { IMAGES, SVGICON } from "../../../constant/theme";
 const MainNav =({classChange}) =>{
 	const [position, setPosition] = useState(window.pageYOffset)
     const [visible, setVisible] = useState(true) 
+	
+	const [selectedLang, setSelectedLang] = useState('en');
+
+    const handleChange = (eventKey) => {
+        setSelectedLang(eventKey);
+    }
+
+    // Update document direction when selected language changes
+    useEffect(() => {
+        document.body.dir = selectedLang === 'ar' ? 'rtl' : 'ltr';
+        document.body.className = selectedLang === 'ar' ? 'arabic frontend-body' : 'frontend-body';
+    }, [selectedLang]);
+
     useEffect(()=> {
         const handleScroll = () => {
            let moving = window.pageYOffset
@@ -26,6 +39,7 @@ const MainNav =({classChange}) =>{
            window.removeEventListener("scroll", handleScroll);
         })
     })
+	
 
   const cls = visible ? "active" : "deactive";
 	return(
@@ -100,12 +114,12 @@ const MainNav =({classChange}) =>{
 								<NavDropdown.Item href="#action/3.1">My Profile</NavDropdown.Item>
 								<NavDropdown.Item href="#action/3.2">Sign Out</NavDropdown.Item>
 							</NavDropdown>
-							<NavDropdown title={<span><i className="najahna-global-icon me-1"></i>ENG<i className="najahna-down-arrow ms-1"></i></span>} id="lang-drop" className="btn lang-btn">
-								<NavDropdown.Item href="#action/3.1">
+							<NavDropdown onSelect={handleChange} title={<span><i className="najahna-global-icon me-1"></i>{selectedLang.toUpperCase()}<i className="najahna-down-arrow ms-1"></i></span>} id="lang-drop" className="btn lang-btn">
+								<NavDropdown.Item eventKey="en">
 									<span className="me-2"><img alt="UK"  src={IMAGES.UK} /></span>
 									English
 								</NavDropdown.Item>
-								<NavDropdown.Item href="#action/3.2">
+								<NavDropdown.Item eventKey="ar">
 									<span className="me-2"><img alt="Arabic"  src={IMAGES.Arabic} /></span>
 									Arabic
 								</NavDropdown.Item>

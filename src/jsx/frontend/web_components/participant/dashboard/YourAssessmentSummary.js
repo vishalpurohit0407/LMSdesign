@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import Table from 'react-bootstrap/Table';
 import Pagination from 'react-bootstrap/Pagination';
-import { IMAGES, SVGICON } from "../../../constant/theme";
+import { IMAGES, SVGICON } from "../../../../constant/theme";
 
 
 const AssessmentSummary =({classChange}) =>{
@@ -72,7 +72,7 @@ const AssessmentSummary =({classChange}) =>{
 								<td>1</td>
 								<td>1</td>
 								<td><span className="status pass">1(50%)</span></td>
-								<td><span className="badge pass">Fail</span></td>
+								<td><span className="badge pass">Pass</span></td>
 								<td><span className="badge details">Details</span></td>
 							</tr>
 						</tbody>
@@ -82,7 +82,7 @@ const AssessmentSummary =({classChange}) =>{
 						<Pagination size="sm" className="ms-auto">
 							<Pagination.Prev>Previous</Pagination.Prev>
 							{items}
-							<Pagination.Next />
+							<Pagination.Next>Next</Pagination.Next>
 						</Pagination>
 					</div>
 				</div>

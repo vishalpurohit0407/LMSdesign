@@ -1,6 +1,6 @@
 import React,{useState } from "react";
 import { Link,useLocation  } from "react-router-dom";
-import { IMAGES, SVGICON } from "../../../constant/theme";
+import { IMAGES, SVGICON } from "../../../../constant/theme";
 
 
 const Sidebar =({classChange}) =>{
@@ -16,37 +16,37 @@ const Sidebar =({classChange}) =>{
 				<h4 className="title">My <span>Dashboard</span></h4>
 				<ul className="menus pb-1">
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/dashboard" ? "active" : ""}`}  to="/web/dashboard">
+						<Link className={`nav-link ${location.pathname === "/web/participent/dashboard" ? "active" : ""}`}  to="/web/participent/dashboard">
 							<i class="najahna-dashboard-icon"></i>Dashboard
 						</Link>
 					</li>
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/my-profile" ? "active" : ""}`}  to="/web/my-profile">
+						<Link className={`nav-link ${location.pathname === "/web/participent/my-profile" ? "active" : ""}`}  to="/web/participent/my-profile">
 							<i class="najahna-profile-user-icon"></i>My Profile
 						</Link>
 					</li>
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/enrolled-course" ? "active" : ""}`}  to="/web/enrolled-course">
+						<Link className={`nav-link ${location.pathname === "/web/participent/enrolled-course" ? "active" : ""}`}  to="/web/participent/enrolled-course">
 							<i class="najahna-enrolled-icon"></i>Enrolled Courses
 						</Link>
 					</li>
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/my-assessment" ? "active" : ""}`}  to="/web/my-assessment">
+						<Link className={`nav-link ${location.pathname === "/web/participent/my-assessment" ? "active" : ""}`}  to="/web/participent/my-assessment">
 							<i class="najahna-assessments-icon"></i>My Assessments
 						</Link>
 					</li>
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/order-history" ? "active" : ""}`}  to="/web/order-history">
-							<i class="najahna-order-icon"></i>My Assessments
+						<Link className={`nav-link ${location.pathname === "/web/participent/order-history" ? "active" : ""}`}  to="/web/participent/order-history">
+							<i class="najahna-order-icon"></i>Order History
 						</Link>
 					</li>
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/wishlist" ? "active" : ""}`}  to="/web/wishlist">
+						<Link className={`nav-link ${location.pathname === "/web/participent/wishlist" ? "active" : ""}`}  to="/web/participent/wishlist">
 							<i class="najahna-heart-icon"></i>Wishlist
 						</Link>
 					</li>
 					<li>
-						<Link className={`nav-link ${location.pathname === "/web/talk-to-us" ? "active" : ""}`}  to="/web/talk-to-us">
+						<Link className={`nav-link ${location.pathname === "/web/participent/talk-to-us" ? "active" : ""}`}  to="/web/participent/talk-to-us">
 							<i class="najahna-talk-to-us-icon"></i>Talk to Us
 						</Link>
 					</li>

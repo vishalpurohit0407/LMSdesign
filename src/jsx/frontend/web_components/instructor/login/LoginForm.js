@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { IMAGES, SVGICON } from "../../../constant/theme";
+import { IMAGES, SVGICON } from "../../../../constant/theme";
 
 
 const InstructorLogin =({classChange}) =>{

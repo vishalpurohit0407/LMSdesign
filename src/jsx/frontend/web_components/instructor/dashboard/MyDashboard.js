@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { IMAGES, SVGICON } from "../../../constant/theme";
+import { IMAGES, SVGICON } from "../../../../constant/theme";
 
 
 const MyDashboard =({classChange}) =>{
@@ -10,11 +10,11 @@ const MyDashboard =({classChange}) =>{
 					<div className="col-md-4">
 						<div className="card align-items-center">
 							<span className="d-inline-flex align-items-center justify-content-center">
-								<i class="najahna-saving-icon"></i>
+								<i class="najahna-profile-user-icon"></i>
 							</span>
 							<div>
-								<label>Enrolled Courses</label>
-								<h5 className="mb-0">06</h5>
+								<label>Total Students</label>
+								<h5 className="mb-0">15</h5>
 							</div>
 						</div>
 					</div>
@@ -24,7 +24,7 @@ const MyDashboard =({classChange}) =>{
 								<i class="najahna-pie-chart-icon"></i>
 							</span>
 							<div>
-								<label>Passed Assessment</label>
+								<label>Total Courses</label>
 								<h5 className="mb-0">01</h5>
 							</div>
 						</div>
@@ -32,11 +32,11 @@ const MyDashboard =({classChange}) =>{
 					<div className="col-md-4">
 						<div className="card align-items-center">
 							<span className="d-inline-flex align-items-center justify-content-center">
-								<i class="najahna-repeat-icon"></i>
+								<i class="najahna-saving-icon"></i>
 							</span>
 							<div>
-								<label>Failed Assessment</label>
-								<h5 className="mb-0">03</h5>
+								<label>Total Earnings</label>
+								<h5 className="mb-0">$460</h5>
 							</div>
 						</div>
 					</div>
