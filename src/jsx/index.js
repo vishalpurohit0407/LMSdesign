@@ -138,6 +138,12 @@ import InsEditProfile from "./frontend/web_pages/instructor/EditProfile";
 import PartDashboard from "./frontend/web_pages/participant/Dashboard";
 import PartMyProfile from "./frontend/web_pages/participant/MyProfile";
 import PartEditProfile from "./frontend/web_pages/participant/EditProfile";
+import PartEnrolledCourses from "./frontend/web_pages/participant/EnrolledCourses";
+import PartWishlist from "./frontend/web_pages/participant/Wishlist";
+import PartMyAssessments from "./frontend/web_pages/participant/Assessments";
+import PartOrderHistory from "./frontend/web_pages/participant/OrderHistory";
+import PartQuizOverview from "./frontend/web_pages/participant/QuizOverview";
+import PartTalkToUs from "./frontend/web_pages/participant/TalkToUs";
 
 
 import { ThemeContext } from "../context/ThemeContext";
@@ -285,7 +291,14 @@ const Markup = () => {
               <Route path='/web/participent/login' element={ <ParticipentLoginFrm /> }  /> 
               <Route path='/web/participent/dashboard' element={ <PartDashboard /> }  /> 
               <Route path='/web/participent/my-profile' element={ <PartMyProfile /> }  />
-              <Route path='/web/participent/edit-profile' element={ <PartEditProfile /> }  />    
+              <Route path='/web/participent/edit-profile' element={ <PartEditProfile /> }  />
+              <Route path='/web/participent/enrolled-course' element={ <PartEnrolledCourses /> }  />
+              <Route path='/web/participent/wishlist' element={ <PartWishlist /> }  />
+              <Route path='/web/participent/my-assessment' element={ <PartMyAssessments /> }  />
+              <Route path='/web/participent/order-history' element={ <PartOrderHistory /> }  />
+              <Route path='/web/participent/quiz-overview' element={ <PartQuizOverview /> }  />
+              <Route path='/web/participent/talk-to-us' element={ <PartTalkToUs /> }  />
+                  
               <Route  element={<MainLayout />} > 
                   {allroutes.map((data, i) => (
                     <Route

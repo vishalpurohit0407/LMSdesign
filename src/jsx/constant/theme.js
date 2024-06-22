@@ -123,6 +123,9 @@ export const IMAGES = {
     FbFillIcon : require('../../images/webimages/facebook-fill-icon.svg'),
     AppleFillIcon : require('../../images/webimages/apple-fill-icon.svg'),
     ProfileImg : require('../../images/webimages/profile-img.png'),
+    LeftArrow : require('../../images/webimages/left-arow.svg'),
+    AttachIcon : require('../../images/webimages/attached-icon.svg'),
+    SendIcon : require('../../images/webimages/send-icon.svg'),
 
     FooterLogo : require('../../images/webimages/footer-logo.png'),
 

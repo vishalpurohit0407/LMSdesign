@@ -34,7 +34,10 @@ a:focus, a:hover{color: #008FCC;}
 .google-btn{background-color: #E9F1FF; width: 100%; max-width: 320px; border-radius: 10px; padding: 15px 25px; font-size: 16px; line-height: 24px; color: #4285F4; font-weight: 400;}
 .theme-btn.red-theme-btn{background-color: #862234; border-radius: 8px;}
 .theme-btn.red-theme-btn.btn10:hover{color: #862234 !important;}
-
+.download-icon{box-shadow: 0px 2px 16px 0px #00000014; background: #fff; width: 34px; height: 34px; border-radius: 8px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; 
+  align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+.download-icon i{font-size: 18px;}
+.download-icon.disable i:before{color: #C3C2B8;}
 @keyframes pulse-me {
   0% {
     transform: scale(0.5);
@@ -75,6 +78,7 @@ a:focus, a:hover{color: #008FCC;}
   filter: alpha(opacity=0.32);
 
 }
+
 
 /* Star Rating */
 .rating-group {display: inline-flex;}
@@ -462,7 +466,6 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .hero .main-img-animation:after{background-color: rgba(255,255,255,0.4); width: 240px; height: 240px; top: 40px; animation-delay: 1s;}
 .hero .img-animation:before{background-color: rgba(255,255,255,0.6); width: 200px; height: 200px; top: 60px; animation-delay: 2s;}
 .hero .img-animation:after{background-color: rgba(255,255,255,0.8); width: 165px; height: 165px; top: 78px; animation: inherit;}
-
 /* End Home Banner CSS */
 
 /* Start How it works CSS */
@@ -604,6 +607,7 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
   box-shadow: 0px 0px 8px 0px #0000001F; border-radius: 8px; padding: 5px 10px; }
 .main-dashboard .enrolled-courses .courses-listing .card-header label .new-price{font-size: 18px; font-weight: 600; color: #862234;}
 .main-dashboard .enrolled-courses .courses-listing .card-header label .old-price{font-size: 16px; text-decoration: line-through; font-weight: 400; color: #6D737A;}
+.main-dashboard .enrolled-courses .courses-listing .card-footer{border: none;}
 .main-dashboard .enrolled-courses .card .profile-details{gap: 10px;}
 .main-dashboard .enrolled-courses .card .profile-details .profile-icon{width: 48px; height: 48px; border-radius: 100%;}
 .main-dashboard .enrolled-courses .card .profile-details .profile-icon img{width: 100%; max-width: 48px; border-radius: 100%; border: 1px solid #082758;}
@@ -618,14 +622,56 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .main-dashboard .enrolled-courses .card .course-duration label i{font-size: 20px; vertical-align: middle; margin-right: 10px;}
 .main-dashboard .enrolled-courses .card .card-footer label{font-size: 18px;}
 .main-dashboard .enrolled-courses .card .card-footer span{font-size: 15px; color: #E91313;}
+.main-dashboard .enrolled-courses.myenrolled-course{padding: 30px 20px; border-radius: 12px;}
+.main-dashboard .enrolled-courses.myenrolled-course .courses-listing,
+.main-dashboard .services.order-history{padding: 0; border-radius: 0; background-color: transparent;}
+.main-dashboard .enrolled-courses.myenrolled-course .nav-tabs li button label,
+.main-dashboard .services.order-history .nav-tabs li button label{font-size: 16px;}
+.main-dashboard .enrolled-courses.myenrolled-course .nav-tabs li button,
+.main-dashboard .services.order-history .nav-tabs li button{padding-left: 16px; padding-right: 16px;}
+.main-dashboard .services.order-history .nav-tabs li button{min-width: 150px; background-color: #F4F4F4 !important;}
+.main-dashboard .services.order-history .nav-tabs li button label span.arrow{ background-color: #F4F4F4 !important;}
+.main-dashboard .services.order-history .nav-tabs li button.active, 
+.main-dashboard .services.order-history .nav-tabs li button:hover{ background-color: #fff !important;}
+.main-dashboard .services.order-history .nav-tabs li button.active label span.arrow, 
+.main-dashboard .services.order-history .nav-tabs li button:hover label span.arrow{background-color: #008FCC !important;}
+.main-dashboard .services.order-history .nav-tabs li button label span.arrow,
+.main-dashboard .enrolled-courses.myenrolled-course .nav-tabs li button label span.arrow{width: 32px; height: 32px;}
+.main-dashboard .quiz-titlebar .theme-btn{border-radius: 8px; margin-left: 20px; padding: 0 0 0 20px; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; 
+  -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+.main-dashboard .quiz-titlebar .theme-btn span{width: 46px; height: 46px; margin-left: 12px; background-color: #862234; border-radius: 8px; display: -webkit-inline-box; 
+  display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+.main-dashboard .talk-to-us{padding: 30px; border-radius: 12px; background-color: #F4F4F4;}
+.main-dashboard .talk-to-us .chat-box{max-height: 600px; overflow-y: auto; padding-right: 5px;}
+.main-dashboard .talk-to-us .chat-box .media{margin-bottom: 30px; max-width: 410px; -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+.main-dashboard .talk-to-us .chat-box .user-info{display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; 
+  margin-bottom: 15px; width: 100%; }
+.main-dashboard .talk-to-us .chat-box .user-info p{margin: 0; color: #6D737A; font-size: 12px; line-height: 18px; font-weight: 300;}
+.main-dashboard .talk-to-us .chat-box .reciever .user-info{-webkit-box-orient: horizontal;-webkit-box-direction: reverse;-ms-flex-direction: row-reverse;flex-direction: row-reverse;}
+.main-dashboard .talk-to-us .chat-box .user-info img{max-width: 40px; border-radius: 100%; object-fit: cover;}
+.main-dashboard .talk-to-us .chat-box .user-info label{font-size: 16px; color: #862234; font-weight: 500;}
+.main-dashboard .talk-to-us .chat-box .sender .media-body{padding: 8px 10px 8px 16px; background-color: #fff; border-radius: 0px 12px 12px 12px;}
+.main-dashboard .talk-to-us .chat-box .sender .media-body p{font-size: 13px; line-height: 20px; margin: 0; color: #082758;}
+.main-dashboard .talk-to-us .chat-box .reciever .media-body{padding: 8px 10px 8px 16px; background-color: #082758; border-radius: 12px 0px 12px 12px;}
+.main-dashboard .talk-to-us .chat-box .reciever .media-body p{font-size: 13px; line-height: 20px; margin: 0; color: #fff;}
+.main-dashboard .talk-to-us .message-input{gap: 20px; width: 100%; position: relative; padding-top: 5px;}
+.main-dashboard .talk-to-us .attached-button{position: relative;  width: 48px; height: 48px; background: #008FCC; border-radius: 8px; overflow: hidden; display: -webkit-inline-box; 
+  display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; flex: 0 0 48px; max-width: 48px;}
+.main-dashboard .talk-to-us .attached-button .upload-box{display: inline-block; position: absolute; z-index: 1; width: 100%; height: 100%; top: 0; left: 0; opacity: 0; cursor: pointer;}
+.main-dashboard .talk-to-us .attached-button img{max-width: 22px;}
+.main-dashboard .talk-to-us .message-input .form-control{ border: 2px solid #C3C2B8; padding: 10px 45px 10px 20px; color: #828282; font-weight: 500;}
+.main-dashboard .talk-to-us .message-input button{position: absolute; background-color: transparent; outline: none; border: none; box-shadow: none; top: 12px; right: 17px;}
 
-/* Star Table CSS */
-.global-table{margin-bottom: 0;}
+
+/* Start Table CSS */
+.global-table{margin-bottom: 0; padding-bottom: 10px;}
 .global-table, .global-table table{border-radius: 25px 25px 0 0; border: none;}
 .global-table table thead tr{border: none;}
 .global-table table thead th{background-color: #082758; padding: 12px 20px; color: #fff; font-size: 15px; line-height: 20px; font-weight: 500; vertical-align: middle;}
 .global-table table thead th:first-child{border-radius: 25px 0 0 0;}
 .global-table table thead th:last-child{border-radius: 0 25px 0 0;}
+.global-table table thead th:not(:first-child),
+.global-table table tbody td:not(:first-child){text-align: center;}
 .global-table table tbody tr{border-color: #fff;}
 .global-table table tbody tr:last-child{border-bottom: none;}
 .global-table table tbody td{background-color: #F4F4F4; border-color: #fff; font-size: 13px; line-height: 18px; color: #6D737A; font-weight: 400; padding: 14px 20px;}
