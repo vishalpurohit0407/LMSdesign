@@ -11,7 +11,8 @@ h6{font-size: 16px; line-height: 26px; color: #393939; font-weight: 600;}
 p{line-height: 24px;}
 .form-group{margin-bottom: 30px;}
 .form-group label{font-size: 16px; line-height: 22px; font-weight: 500; color: #082758; margin-bottom: 10px;}
-.form-control{color: #6D737A; border-radius: 8px; font-size: 16px; font-weight: 500; height: auto; border-color: #C3C2B8; padding: 11px 16px;}
+.form-control,
+textarea.form-control{color: #6D737A; border-radius: 8px; font-size: 16px; font-weight: 500; height: auto; border-color: #C3C2B8; padding: 11px 16px;}
 .form-control:focus{border-color: #393939;}
 a ,button{ text-decoration: none; border: none; outline: none; transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; }
 a:focus, a:hover{color: #008FCC;}
@@ -396,6 +397,10 @@ a:focus, a:hover{color: #008FCC;}
     content: "\e92f";
     color: #082758;
   }
+  .najahna-right-icon:before {
+    content: "\e930";
+    color: #fff;
+  }
 /* End Custom Icons */ 
 
 /* Start Header CSS */
@@ -703,11 +708,16 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .my-profile{padding: 30px; border-radius: 12px; background-color: #F4F4F4;}
 .my-profile h4{font-size: 20px; line-height: 28px; font-weight: 600; color: #082758; margin-bottom: 28px;}
 .my-profile .form-group label{font-size: 18px;}
-.my-profile .form-group .f-input{position: relative;}
-.my-profile .form-group .fileUpload { position: absolute; right: 0; top: 0px; overflow: hidden;}
-.my-profile .form-group .fileUpload input.upload {position: absolute; top: 0px; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0);}
-.my-profile .form-group .btn--browse{border: none; font-size: 16px;  border-left: 0;border-radius: 0 8px 8px 0; background-color: #c3c2b84d; color: #828282; height: 48px;padding: 12px 14px;}
-.my-profile .form-group .btn--browse:hover{background-color: #c3c2b833;}
+.my-profile .form-group .f-input,
+.media-card-body .f-input{position: relative;}
+.my-profile .form-group .fileUpload,
+.media-card-body .f-input .fileUpload{ position: absolute; right: 0; top: 0px; overflow: hidden;}
+.my-profile .form-group .fileUpload input.upload,
+.media-card-body .f-input .fileUpload input.upload {position: absolute; top: 0px; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0);}
+.my-profile .form-group .btn--browse,
+.media-card-body .f-input .btn--browse{border: none; font-size: 16px;  border-left: 0;border-radius: 0 8px 8px 0; background-color: #c3c2b84d; color: #828282; height: 48px;padding: 12px 14px;}
+.my-profile .form-group .btn--browse:hover,
+.media-card-body .f-input .btn--browse:hover{background-color: #c3c2b833;}
 .my-profile.edit-profile h4{margin-bottom: 8px;}
 .avtar-section{padding: 18px 30px; border-radius: 12px; background-color: #F4F4F4; margin-bottom: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; 
   -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
@@ -720,6 +730,78 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .avtar-section .action-btn a{display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; 
   box-shadow: 0px 2px 16px 0px #00000014; width: 70px; height: 70px; background-color: #fff; border-radius: 16px; font-size: 28px;}
 /*=== End My Profile CSS ===*/
+
+/*=== Start Add Course Page CSS ===*/
+.add-course{padding: 40px 10px 90px;}
+.add-course h2{margin-bottom: 40px;}
+.add-course .steps-card{border-radius: 16px; box-shadow: 0px 4px 36px 0px #00000014; background-color: #fff; padding: 35px 40px;}
+.add-course .course-content{padding-top: 50px;}
+.add-course .form-wizard .nav-wizard .nav-link span{border: 2px solid #CCC; position: relative; background-color: #fff; font-weight: 600;color: #862234;}
+.add-course .form-wizard .nav-wizard .nav-link span.active,
+.add-course .form-wizard .nav-wizard .nav-link span.completed{background-color: #008FCC; border-color: #008FCC; color: #008FCC;}
+.add-course .form-wizard .nav-wizard .nav-link:after{background-color: #CCC;}
+.form-wizard .nav-wizard .nav-link.completed:after,
+.form-wizard .nav-wizard .nav-link.active:after{background-color: #008FCC !important;}
+.add-course .form-wizard .nav-wizard .nav-link span:after{content: "\e930"; opacity: 0; position: absolute; font-family: 'icomoon-dashboard' !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
+   color: #fff; top: 50%; left: 0; right: 0; margin: 0 auto; -webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+.add-course .form-wizard .nav-wizard .nav-link span.active:after,
+.add-course .form-wizard .nav-wizard .nav-link span.completed:after{opacity: 1;}
+.add-course .form-wizard button{position: relative;}
+.add-course .form-wizard button:before{content: attr(data-title); bottom: -40px; color: #862234; position: absolute; width: 100%; left: 0; right: 0; margin: 0 auto;}
+.add-course .form-wizard button.active:before,
+.add-course .form-wizard button.completed:before{color: #008FCC;}
+.add-course .course-content h3{color: #082758; margin-bottom: 10x;}
+.add-course .course-content p{color: #6C6C6C;}
+.add-course .course-content ul{gap: 45px; margin-top: 30px;}
+.add-course .course-content select{background-image: url('../images/webimages/down-arrow-gray.svg'); background-repeat: no-repeat; background-position: 99% center; background-size: 16px;}
+.add-course button.theme-btn{border-radius: 8px;}
+.add-course button.theme-btn.prev{background-color: #862234;}
+.add-course button.theme-btn.prev:hover{color: #862234 !important;}
+/* .steps-card div > div > div > div:first-child{background-color: transparent; border: 2px solid #CCCCCC;} */
+.add-course .drag-image{border-radius: 16px; position: relative; box-shadow: 0px 4px 36px 0px #00000014; padding: 25px 20px 20px; text-align: center; margin-bottom: 30px;}
+.add-course .drag-image .icon{padding-bottom: 15px;}
+.add-course .drag-image h4{line-height: 1.5; margin-bottom: 20px;}
+.add-course .drag-image h4 a{color: #862234; text-decoration: underline;}
+.add-course .drag-image input[type="file"]{position: absolute; width: 100%; height: 100%; opacity: 0; top: 0; left: 0;}
+
+.add-course .media-intro-card,
+.add-course .filled-question{background: #F4F4F4; padding: 30px 30px 45px; border-radius: 12px;}
+.add-course .media-intro-card:not(:last-child){margin-bottom: 40px;}
+.add-course .media-intro-card .media-card-header{margin-bottom: 30px;}
+.add-course .accordion .accordion-item{background-color: #fff; padding: 0 30px; border-radius: 16px;  box-shadow: 0px 2px 16px 0px #00000014;}
+.add-course .accordion .accordion-header{margin-bottom: 0;}
+.add-course .accordion .accordion-header .accordion-button{display: flex; align-items: center; justify-content: space-between; box-shadow: none; outline: none; border-radius: 0; padding: 20px 0; margin-bottom: 0; border: none; background: transparent;}
+.add-course .accordion .accordion-header .accordion-button label{color: #862234; font-size: 22px; font-weight: 500; line-height: normal; margin: 0;}
+.add-course .accordion .accordion-header ul{gap: 15px; margin: 0 40px 0 0;}
+.add-course .accordion .accordion-header ul li{line-height: normal;}
+.add-course .accordion .accordion-header ul li i{font-size: 20px;}
+.add-course .accordion .accordion-collapse{border: none !important;}
+.add-course .accordion .accordion-body{padding: 30px 0; border-top: 1px solid #ccc;}
+.add-course .accordion .accordion-body .form-group:last-child,
+.add-course .accordion .accordion-item:last-child{margin-bottom: 0;}
+.add-course .accordion .accordion-body .content{padding: 20px; border-radius: 8px; border: 1px solid #ccc;}
+.add-course .accordion .accordion-button::after{content: '\e924'; font-family: 'icomoon-dashboard' !important; speak: never; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased;
+  font-size: 30px; transform: unset; top: 20px; color: #862234; right: 0;}
+.add-course .accordion .accordion-button:not(.collapsed)::after{-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg); }
+
+.add-course .filled-question{margin-top: 40px; margin-bottom: 30px;}
+.add-course .filled-question .question-header{background: #fff; padding: 20px 30px; box-shadow: 0px 2px 16px 0px #00000014; border-radius: 16px;}
+.add-course .filled-question .question-header h4{margin: 0; color: #862234;}
+.add-course .filled-question .question-body{padding: 30px 30px 0;}
+.add-course .filled-question .question-body ul{margin: 0;}
+.add-course .filled-question .question-body ul li:not(:last-child){margin-bottom: 14px;}
+.add-course .filled-question .question-body ul li .chkmark{background-color: #fff;}
+.add-course .filled-question .question-body ul li .common-chkbox input:checked ~ .chkmark{background-color: #008FCC;}
+
+.add-course .filled-question.add-new-question{margin-top: 0;}
+.add-course .filled-question.add-new-question select{background-position: 95% center;}
+.add-course .filled-question.settings{margin-bottom: 0;}
+
+.add-course .added-succesfully{text-align: center; padding-bottom: 50px;}
+.add-course .added-succesfully img{margin-bottom: 30px;}
+.add-course .added-succesfully h3{margin-bottom: 20px;}
+.add-course .added-succesfully h5{color: #6D737A; font-weight: 500; margin-bottom: 0;}
+/*=== End Add Course Page CSS ===*/
 
 /*=== Start Footer CSS ===*/
 footer .main-footer{background-color: #082758; padding: 35px 10px;}

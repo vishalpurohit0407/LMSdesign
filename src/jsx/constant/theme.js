@@ -126,6 +126,9 @@ export const IMAGES = {
     LeftArrow : require('../../images/webimages/left-arow.svg'),
     AttachIcon : require('../../images/webimages/attached-icon.svg'),
     SendIcon : require('../../images/webimages/send-icon.svg'),
+    RightIcon: require('../../images/webimages/right-icon.svg'),
+    UploadIcon: require('../../images/webimages/upload-icon.svg'),
+    ThumbUp: require('../../images/webimages/thumb-up.svg'),
 
     FooterLogo : require('../../images/webimages/footer-logo.png'),
 
