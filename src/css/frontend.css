@@ -401,6 +401,14 @@ a:focus, a:hover{color: #008FCC;}
     content: "\e930";
     color: #fff;
   }
+  .najahna-list-view:before {
+    content: "\e931";
+    color: #008fcc;
+  }
+  .najahna-grid-view:before {
+    content: "\e932";
+    color: #008fcc;
+  }
 /* End Custom Icons */ 
 
 /* Start Header CSS */
@@ -606,9 +614,12 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .main-dashboard .assessment-summary .title{margin-bottom: 30px;}
 .main-dashboard .enrolled-courses{padding-top: 50px;}
 .main-dashboard .enrolled-courses .courses-listing{padding: 10px 30px 30px; background-color: #F4F4F4; border-radius: 12px;}
-.main-dashboard .enrolled-courses .courses-listing .card{padding: 10px;}
-.main-dashboard .enrolled-courses .courses-listing .card .card-header{position: relative; -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
-.main-dashboard .enrolled-courses .courses-listing .card .card-header label{position: relative; margin: -34px auto 0; bottom: 15px; background-color: #fff; display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex; gap: 5px; 
+.main-dashboard .enrolled-courses .courses-listing .card,
+.filter-search-listing{padding: 10px;}
+.main-dashboard .enrolled-courses .courses-listing .card .card-header,
+.search-pg .listing-group.grid-view-listing .card .card-header{position: relative; -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+.main-dashboard .enrolled-courses .courses-listing .card .card-header label,
+.search-pg .listing-group.grid-view-listing label.prize{position: relative; margin: -34px auto 0; bottom: 15px; background-color: #fff; display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex; gap: 5px; 
   box-shadow: 0px 0px 8px 0px #0000001F; border-radius: 8px; padding: 5px 10px; }
 .main-dashboard .enrolled-courses .courses-listing .card-header label .new-price{font-size: 18px; font-weight: 600; color: #862234;}
 .main-dashboard .enrolled-courses .courses-listing .card-header label .old-price{font-size: 16px; text-decoration: line-through; font-weight: 400; color: #6D737A;}
@@ -688,18 +699,30 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .badge.fail{background-color: #862234;}
 .badge.pass{background-color: #FFC27A; color: #082758;}
 .badge.details{background-color: #008FCC;}
-.global-table .pagination{margin-bottom: 0; gap: 10px;}
+.global-table .pagination,
+.search-pg .pagination{margin-bottom: 0; gap: 10px;}
 .global-table .pagination ul li:first-child a,
-.global-table .pagination ul li:last-child a{border: none; border-radius: 0; width: auto !important; height: auto m !important; color: #082758; font-size: 15px; font-weight: 500;}
+.global-table .pagination ul li:last-child a,
+.search-pg .pagination  ul li:first-child a,
+.search-pg .pagination  ul li:last-child a{border: none; border-radius: 0; width: auto !important; height: auto m !important; color: #082758; font-size: 15px; font-weight: 500;}
 .global-table .pagination ul li:first-child a:hover,
-.global-table .pagination ul li:last-child a:hover{background-color: transparent !important;}
+.global-table .pagination ul li:last-child a:hover,
+.search-pg .pagination ul li:first-child a:hover,
+.search-pg .pagination  ul li:last-child a:hover{background-color: transparent !important;}
 .global-table .pagination .page-item .page-link span,
-.global-table .pagination ul li span{color: #082758; font-size: 15px; font-weight: 500;}
-.global-table .pagination.pagination-sm .page-item .page-link{width: 40px; margin: 0; color: #082758; font-size: 15px; font-weight: 500; height: 40px; border: none; border-radius: 10px;}
+.global-table .pagination ul li span,
+.search-pg .pagination .page-item .page-link span,
+.search-pg .pagination ul li span{color: #082758; font-size: 15px; font-weight: 500;}
+.global-table .pagination.pagination-sm .page-item .page-link,
+.search-pg .pagination.pagination-sm .page-item .page-link{width: 40px; margin: 0; color: #082758; font-size: 15px; font-weight: 500; height: 40px; border: none; border-radius: 10px;}
 .global-table .pagination.pagination-sm .page-item span.page-link,
-.global-table .pagination.pagination-sm .page-item .page-link:hover{background-color: #862234; color: #fff;}
+.global-table .pagination.pagination-sm .page-item .page-link:hover,
+.search-pg .pagination.pagination-sm .page-item span.page-link,
+.search-pg .pagination.pagination-sm .page-item .page-link:hover{background-color: #862234; color: #fff;}
 .global-table .pagination ul li:first-child a:hover span,
-.global-table .pagination ul li:last-child a:hover span{color: #FFC27A !important;}
+.global-table .pagination ul li:last-child a:hover span,
+.search-pg .pagination ul li:first-child a:hover span,
+.search-pg .pagination ul li:last-child a:hover span{color: #FFC27A !important;}
 /* End Table CSS */
 
 /*=== End Dashboard CSS ===*/
@@ -802,6 +825,46 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .add-course .added-succesfully h3{margin-bottom: 20px;}
 .add-course .added-succesfully h5{color: #6D737A; font-weight: 500; margin-bottom: 0;}
 /*=== End Add Course Page CSS ===*/
+
+/*=== Start Search Category Page CSS ===*/
+.search-pg .search-banner{background-color: #6D737A; padding: 60px 0;}
+.search-pg .search-banner h2{color: #fff; margin-bottom: 20px;}
+.search-pg .search-banner .page-titles{display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex; padding: 6px 14px; border-radius: 8px; background: #082758; border: none;}
+.search-pg .search-banner .page-titles .breadcrumb,
+.search-pg .search-banner .page-titles .breadcrumb a{font-size: 14px; font-weight: 500; color: #FFC27A;}
+.search-pg .search-banner .page-titles .breadcrumb li.active a{color: #fff !important;}
+.search-pg .search-banner .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item:before{color: #FFC27A;} 
+.search-pg .search-listing{padding: 45px 0 90px;}
+.search-pg .search-listing h2{margin-bottom: 40px;}
+.search-pg .search-listing .show-result{padding: 18px 25px; border-radius: 12px; background-color: #F4F4F4; margin-bottom: 40px;}
+.search-pg .search-listing .show-result .btn-group{gap: 25px;}
+.search-pg .search-listing .show-result .btn-primary{background-color: transparent; border: none; border-radius: 0; padding: 0; font-size: 30px;}
+.search-pg .search-listing .show-result .btn-primary.active i:before{color: #862234;}
+.search-pg .search-filters .search-filter-card{border-radius: 16px; box-shadow: 0px 4px 18px 0px #00000014; background-color: #fff; }
+.search-pg .search-filters .search-filter-card:not(:last-child){margin-bottom: 20px;}
+.search-pg .search-filters .search-filter-card  .filter-card-header{padding: 15px 20px; border-bottom: 2px solid #E7E9EB;}
+.search-pg .search-filters .search-filter-card  .filter-card-header h5{font-size: 20px; margin-bottom: 0; font-weight: 600; color: #000;}
+.search-pg .search-filters .search-filter-card  .filter-card-body{padding: 30px 20px;}
+.search-pg .search-filters .search-filter-card  .filter-card-body ul li:not(:last-child){margin-bottom: 14px;}
+.search-pg .listing-group{padding: 25px; background-color: #F4F4F4; border: none; border-radius: 12px; margin-bottom: 40px;}
+.search-pg .filter-search-listing{background-color: #fff; border-radius: 16px;}
+.search-pg .listing-group .filter-search-listing:not(:last-child){margin-bottom: 20px;}
+.search-pg .listing-group h5{color: #082758 !important;}
+.search-pg .filter-search-listing .card-header{padding: 0;}
+.search-pg .filter-search-listing .card-header img{width: 100%; height: 100%; border-radius: 10px; object-fit: cover; max-height: 212px;}
+.search-pg .filter-search-listing p{font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;   overflow: hidden;}
+.search-pg .filter-search-listing .d-flex label{font-size: 16px; color: #082758; font-weight: 600;}
+.search-pg .filter-search-listing .d-flex span{font-size: 12px; color: #6C6C6C;}
+.search-pg .filter-search-listing label.prize{position: relative; margin: 0; background-color: #fff; display: inline-flex; gap: 5px; box-shadow: 0px 0px 8px 0px #0000001F; border-radius: 8px; padding: 5px 10px;}
+.search-pg .filter-search-listing label.prize .new-price{font-size: 18px; font-weight: 600; color: #862234;}
+.search-pg .filter-search-listing label.prize .old-price{font-size: 16px; text-decoration: line-through; font-weight: 400; color: #6D737A;}
+.search-pg .filter-search-listing .ratings label{font-size: 18px;}
+.search-pg .filter-search-listing .ratings span{font-size: 15px; color: #E91313;}
+.search-pg .listing-group.grid-view-listing{padding-top: 12px; padding-bottom: 12px;}
+.search-pg .listing-group.grid-view-listing .card-title{ padding-bottom: 10px; border-bottom: 1px solid #E7E9EB;}
+.search-pg .listing-group.grid-view-listing .card-body{padding-bottom: 6px;}
+.search-pg .listing-group.grid-view-listing .card-footer{border: none;}
+.search-pg .listing-group.grid-view-listing h5{display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;}
 
 /*=== Start Footer CSS ===*/
 footer .main-footer{background-color: #082758; padding: 35px 10px;}
