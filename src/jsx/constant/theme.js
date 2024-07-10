@@ -129,6 +129,8 @@ export const IMAGES = {
     RightIcon: require('../../images/webimages/right-icon.svg'),
     UploadIcon: require('../../images/webimages/upload-icon.svg'),
     ThumbUp: require('../../images/webimages/thumb-up.svg'),
+    VideoImg: require('../../images/webimages/video-img.png'),
+    VideoIcon: require('../../images/webimages/video-icon.svg'),
 
     FooterLogo : require('../../images/webimages/footer-logo.png'),
 

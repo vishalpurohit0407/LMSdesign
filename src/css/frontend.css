@@ -39,6 +39,10 @@ a:focus, a:hover{color: #008FCC;}
   align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
 .download-icon i{font-size: 18px;}
 .download-icon.disable i:before{color: #C3C2B8;}
+.border-btn{padding: 12px 18px; border-radius: 8px; border: 1px solid #862234; font-size: 16px; line-height: 20px; background-color: transparent; color: #862234;}
+.border-btn i{font-size: 20px; vertical-align: text-top; margin-right: 8px;}
+.border-btn:hover{background-color: #862234; color: #fff;}
+.border-btn:hover i:before{color: #fff;}
 @keyframes pulse-me {
   0% {
     transform: scale(0.5);
@@ -409,6 +413,34 @@ a:focus, a:hover{color: #008FCC;}
     content: "\e932";
     color: #008fcc;
   }
+  .najahna-wishlist:before {
+    content: "\e933";
+    color: #862234;
+  }
+  .najahna-cap:before {
+    content: "\e934";
+    color: #008fcc;
+  }
+  .najahna-assignments:before {
+    content: "\e935";
+    color: #008fcc;
+  }
+  .najahna-access:before {
+    content: "\e936";
+    color: #008fcc;
+  }
+  .najahna-clock:before {
+    content: "\e937";
+    color: #008fcc;
+  }
+  .najahna-video:before {
+    content: "\e938";
+    color: #008fcc;
+  }
+  .najahna-share:before {
+    content: "\e939";
+    color: #862234;
+  }
 /* End Custom Icons */ 
 
 /* Start Header CSS */
@@ -615,29 +647,48 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .main-dashboard .enrolled-courses{padding-top: 50px;}
 .main-dashboard .enrolled-courses .courses-listing{padding: 10px 30px 30px; background-color: #F4F4F4; border-radius: 12px;}
 .main-dashboard .enrolled-courses .courses-listing .card,
-.filter-search-listing{padding: 10px;}
+.filter-search-listing,
+.similar-course .card{padding: 10px;}
 .main-dashboard .enrolled-courses .courses-listing .card .card-header,
-.search-pg .listing-group.grid-view-listing .card .card-header{position: relative; -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+.search-pg .listing-group.grid-view-listing .card .card-header,
+.similar-course .card .card-header{position: relative; -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
 .main-dashboard .enrolled-courses .courses-listing .card .card-header label,
-.search-pg .listing-group.grid-view-listing label.prize{position: relative; margin: -34px auto 0; bottom: 15px; background-color: #fff; display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex; gap: 5px; 
+.search-pg .listing-group.grid-view-listing label.prize,
+.similar-course .card .card-header label{position: relative; margin: -34px auto 0; bottom: 15px; background-color: #fff; display: -webkit-inline-box;display: -ms-inline-flexbox;display: inline-flex; gap: 5px; 
   box-shadow: 0px 0px 8px 0px #0000001F; border-radius: 8px; padding: 5px 10px; }
-.main-dashboard .enrolled-courses .courses-listing .card-header label .new-price{font-size: 18px; font-weight: 600; color: #862234;}
-.main-dashboard .enrolled-courses .courses-listing .card-header label .old-price{font-size: 16px; text-decoration: line-through; font-weight: 400; color: #6D737A;}
-.main-dashboard .enrolled-courses .courses-listing .card-footer{border: none;}
-.main-dashboard .enrolled-courses .card .profile-details{gap: 10px;}
-.main-dashboard .enrolled-courses .card .profile-details .profile-icon{width: 48px; height: 48px; border-radius: 100%;}
-.main-dashboard .enrolled-courses .card .profile-details .profile-icon img{width: 100%; max-width: 48px; border-radius: 100%; border: 1px solid #082758;}
-.main-dashboard .enrolled-courses .card .profile-details h6{margin-bottom: 0; line-height: 20px;}
-.main-dashboard .enrolled-courses .card .profile-details .profile-desc span{font-size: 12px; line-height: 18px; font-weight: 500; color: #6C6C6C;}
-.main-dashboard .enrolled-courses .card .card-body{padding-bottom: 0;}
-.main-dashboard .enrolled-courses .card .card-body a{width: 40px; height: 40px; font-size: 24px;}
-.main-dashboard .enrolled-courses .card .card-body p{font-size: 14px; line-height: 18px; color: #6D737A; display: -webkit-box;
+.main-dashboard .enrolled-courses .courses-listing .card-header label .new-price,
+.similar-course .card .card-header label .new-price{font-size: 18px; font-weight: 600; color: #862234;}
+.main-dashboard .enrolled-courses .courses-listing .card-header label .old-price,
+.similar-course .card .card-header label .old-price{font-size: 16px; text-decoration: line-through; font-weight: 400; color: #6D737A;}
+.main-dashboard .enrolled-courses .courses-listing .card-footer,
+.similar-course .card .card-footer{border: none;}
+.main-dashboard .enrolled-courses .card .profile-details,
+.similar-course .card .profile-details{gap: 10px;}
+.main-dashboard .enrolled-courses .card .profile-details .profile-icon,
+.similar-course .card .profile-details .profile-icon{width: 48px; height: 48px; border-radius: 100%;}
+.main-dashboard .enrolled-courses .card .profile-details .profile-icon img,
+.similar-course .card .profile-details .profile-icon img{width: 100%; max-width: 48px; border-radius: 100%; border: 1px solid #082758;}
+.main-dashboard .enrolled-courses .card .profile-details h6,
+.similar-course .card .profile-details h6{margin-bottom: 0; line-height: 20px;}
+.main-dashboard .enrolled-courses .card .profile-details .profile-desc span,
+.similar-course .card .profile-details .profile-desc span {font-size: 12px; line-height: 18px; font-weight: 500; color: #6C6C6C;}
+.main-dashboard .enrolled-courses .card .card-body,
+.similar-course .card .card-body{padding-bottom: 0;}
+.main-dashboard .enrolled-courses .card .card-body a,
+.similar-course .card .card-body a{width: 40px; height: 40px; font-size: 24px;}
+.main-dashboard .enrolled-courses .card .card-body p,
+.similar-course .card .card-body p{font-size: 14px; line-height: 18px; color: #6D737A; display: -webkit-box;
   -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px;}
-.main-dashboard .enrolled-courses .card .course-duration{border-top: 1px solid #E7E9EB; padding: 6px 0;}
-.main-dashboard .enrolled-courses .card .course-duration label{font-size: 12px; font-weight: 500; color: #008FCC; line-height: 20px;}
-.main-dashboard .enrolled-courses .card .course-duration label i{font-size: 20px; vertical-align: middle; margin-right: 10px;}
-.main-dashboard .enrolled-courses .card .card-footer label{font-size: 18px;}
-.main-dashboard .enrolled-courses .card .card-footer span{font-size: 15px; color: #E91313;}
+.main-dashboard .enrolled-courses .card .course-duration,
+.similar-course .card .course-duration{border-top: 1px solid #E7E9EB; padding: 6px 0;}
+.main-dashboard .enrolled-courses .card .course-duration label,
+.similar-course .card .course-duration label{font-size: 12px; font-weight: 500; color: #008FCC; line-height: 20px;}
+.main-dashboard .enrolled-courses .card .course-duration label i,
+.similar-course .card .course-duration i{font-size: 20px; vertical-align: middle; margin-right: 10px;}
+.main-dashboard .enrolled-courses .card .card-footer label,
+.similar-course .card .card-footer label{font-size: 18px;}
+.main-dashboard .enrolled-courses .card .card-footer span,
+.similar-course .card .card-footer span{font-size: 15px; color: #E91313;}
 .main-dashboard .enrolled-courses.myenrolled-course{padding: 30px 20px; border-radius: 12px;}
 .main-dashboard .enrolled-courses.myenrolled-course .courses-listing,
 .main-dashboard .services.order-history{padding: 0; border-radius: 0; background-color: transparent;}
@@ -865,6 +916,51 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .search-pg .listing-group.grid-view-listing .card-body{padding-bottom: 6px;}
 .search-pg .listing-group.grid-view-listing .card-footer{border: none;}
 .search-pg .listing-group.grid-view-listing h5{display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;}
+/*=== End Search Category Page CSS ===*/
+
+/*=== Start Course Details Page CSS ===*/
+.course-details{padding: 45px 0 50px;}
+.course-details .short-video{position: relative; border-radius: 12px;}
+.course-details .short-video img{max-width: 100%; border-radius: 12px;}
+.course-details .short-video a{position: absolute; display: inline-block; width: auto; max-width: 80px; top: 50%; transform: translateY(-50%); left: 0; right: 0; margin: 0 auto;}
+.course-details .course-price{background-color: #fff; margin: 20px 0; border-radius: 16px; padding: 20px 24px; box-shadow: 0px 4px 18px 0px #00000014;}
+.course-details .course-price span:not(label span){font-size: 22px; color: #000; font-weight: 600;}
+.course-details .course-price label{margin: 0; font-size: 28px; font-weight: bold; color: #862234;}
+.course-details .course-price label span{font-size: 22px; font-weight: 500; color: #6D737A;} 
+.course-details .action-btn{margin-bottom: 20px;}
+.course-details .action-btn button{width: 100%; max-width: 180px;}
+.course-details .theme-btn{width: 100%; border-radius: 8px;}
+.course-details .more-info{margin-top: 20px; overflow: hidden; border-radius: 16px; box-shadow: 0px 4px 18px 0px #00000014; background-color: #fff;}
+.course-details .more-info .info-header{border-bottom: 1px solid #E7E9EB; padding: 18px 20px 16px;}
+.course-details .more-info .info-body{padding: 30px 20px 20px;}
+.course-details .more-info .info-body ul li{font-size: 18px; color: #6D737A; gap: 15px; font-weight: 500; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center;}
+.course-details .more-info .info-body ul li i{font-size: 22px;}
+.course-details .more-info .info-body ul li:not(:last-child){margin-bottom: 16px;}
+
+.course-details .course-name{background-color: #F4F4F4; padding: 30px; border-radius: 16px; margin-bottom: 24px;}
+.course-details .course-name h3{color: #082758;}
+.course-details .course-name p{font-size: 14px;}
+.course-details .course-name .ratings label{font-size: 16px;}
+.course-details .course-name .ratings span{font-size: 15px; color: #E91313;}
+.course-details .course-name .price-label{width: 80px; height: 80px; border-radius: 100%; background-color: #862234; display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; 
+  -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+.course-details .course-name .price-label span{font-size: 22px; color: #fff; font-weight: 600;}
+.course-details .course-duration{-webkit-box-align: center;  -ms-flex-align: center; align-items: center; gap: 16px;}
+.course-details .course-duration label{font-size: 16px; margin: 0; font-weight: 600;color: #082758;}
+.course-details .course-duration label span{font-size: 12px; font-weight: 500;color: #6D737A;}
+.course-details .course-description{padding: 30px 20px; border-radius: 16px;}
+.course-details .course-description.services .nav-tabs{gap: 12px;}
+.course-details .course-description.services .nav-tabs li button{padding-left: 16px; padding-right: 16px; border-color: #008FCC !important; background-color: #008FCC !important;}
+.course-details .course-description.services .nav-tabs li button.active, 
+.course-details .course-description.services .nav-tabs li button:hover{background-color: #fff !important;}
+.course-details .course-description.services .nav-tabs li button label{font-size: 16px; color: #fff !important; line-height: 22px;}
+.course-details .course-description.services .nav-tabs li button.active label, 
+.course-details .course-description.services .nav-tabs li button:hover label{color: #1B1D1F !important;}
+.course-details .course-description h4{margin-bottom: 20px;}
+.course-details .course-description.services .nav-tabs li button label span.arrow{width: 28px; height: 28px;}
+.course-filter-record{border-radius: 12px; background-color: #F4F4F4; padding: 24px 25px 30px;}
+.similar-course{padding-bottom: 90px;}
+/*=== End Course Details Page CSS ===*/
 
 /*=== Start Footer CSS ===*/
 footer .main-footer{background-color: #082758; padding: 35px 10px;}
