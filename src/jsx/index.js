@@ -131,6 +131,7 @@ import Error503 from "./pages/Error503";
 //Web Pages
 import Landing from "./frontend/web_pages/Home";
 import NewCourse from "./frontend/web_pages/Add-New-Course";
+import CourseLecture from "./frontend/web_pages/CourseLecture";
 import SearchCategory from "./frontend/web_pages/SearchCategory";
 import CourseDetails from "./frontend/web_pages/CourseDetails";
 import ParticipentLoginFrm from "./frontend/web_pages/participant/ParticipantLogin";
@@ -288,6 +289,7 @@ const Markup = () => {
               <Route path='/page-error-503' element={<Error503/>} /> 
               <Route path='/web' element={ <Landing /> }  />  
               <Route path='/web/add-course' element={ <NewCourse /> }  />
+              <Route path='/web/course-lecture' element={ <CourseLecture /> }  />
               <Route path='/web/search' element={ <SearchCategory /> }  />
               <Route path='/web/course-details' element={ <CourseDetails /> }  />
               <Route path='/web/instructor/login' element={ <InstructorLogin /> }  />

@@ -441,6 +441,9 @@ a:focus, a:hover{color: #008FCC;}
     content: "\e939";
     color: #862234;
   }
+  .najahna-movie-icon:before {
+    content: "\e93a";
+  }
 /* End Custom Icons */ 
 
 /* Start Header CSS */
@@ -961,6 +964,52 @@ header nav.navbar .right-action .dropdown-menu:before{left: auto; right: 25px;}
 .course-filter-record{border-radius: 12px; background-color: #F4F4F4; padding: 24px 25px 30px;}
 .similar-course{padding-bottom: 90px;}
 /*=== End Course Details Page CSS ===*/
+
+.course-lecture{padding: 40px 0 60px;}
+.course-lecture video{width: 100%;}
+.course-lecture .course-details label.d-block{font-size: 16px; margin-bottom: 0; font-weight: 600; color: #000;}
+.course-lecture .course-details span{font-size: 14px;}
+.course-lecture .course-in-detail{padding: 20px 0; border-bottom: 2px solid #E7E9EB;}
+.course-lecture .course-in-detail:last-child{border: none;}
+.course-lecture .course-in-detail label{font-size: 16px; margin: 0; font-weight: 400;}
+.course-lecture .course-in-detail p{margin-bottom: 0; line-height: 20px;}
+.course-lecture .course-in-detail .border-btn{display: inline-block; width: 100%; max-width: 250px; margin-top: 10px; text-align: center;}
+.course-lecture .course-in-detail .border-btn.disable{cursor: not-allowed; pointer-events: none; opacity: 0.7;}
+.course-lecture .course-in-detail p a{font-weight: bold; text-decoration: underline; color: #862234;}
+.course-lecture .in-details:not(:last-child){padding-bottom: 30px;}
+.course-lecture .course-in-detail ul{margin-top: 15px; padding-left: 20px;}
+.course-lecture .course-in-detail ul li{margin-bottom: 5px; list-style-type: disc;}
+.course-lecture .in-details h5{font-weight: 600; color: #000; margin-bottom: 20px;}
+.course-lecture .in-details h6{font-weight: 600; color: #000; margin-bottom: 0px;}
+.course-lecture .latest-update label{display: block;}
+.course-lecture .course-details{padding-bottom: 0;}
+.course-lecture .latest-update label i{font-size: 16px; vertical-align: middle;}
+.course-lecture .latest-update label i:before{color: #000;}
+.instructor-profile{gap: 15px; margin-bottom: 20px;}
+.instructor-profile .profile-icon{width: 80px; height: 80px; border-radius: 100%; border: 1px solid #E7E9EB;}
+.instructor-profile .profile-icon img{max-width: 100%; width: 80px; height: 80px; border-radius: 100%; object-fit: cover;}
+.instructor-profile h5{color: #000; margin-bottom: 5px;}
+.course-lecture .course-details .course-description{padding: 0; background-color: transparent;}
+.course-lecture .course-details .course-description.services .nav-tabs{overflow-x: auto; flex-wrap: nowrap; padding-bottom: 20px; margin-bottom: 10px;}
+.course-lecture .course-details .course-description.services .nav-tabs li button{box-shadow: none; min-width: 144px; white-space: nowrap; padding-left: 10px; padding-right: 10px;}
+.course-sidebar{background: #fff; border-radius: 10px; box-shadow: 0px 4px 18px 0px #00000014;}
+.course-sidebar .course-header{padding: 15px; border-bottom: 1px solid #E7E9EB;}
+.course-sidebar .course-header h5{margin: 0;}
+.course-sidebar .course-body .accordion .accordion-item{margin: 0;}
+.course-sidebar .course-body .accordion .accordion-item .accordion-button{background-color: transparent;font-weight: 600; padding: 14px 15px; border: none; border-top: 1px solid #E7E9EB; border-radius: 0; color: #000; font-size: 15px; line-height: 22px; 
+  -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; box-shadow: none;}
+.course-sidebar .course-body .accordion .accordion-item .accordion-button span{font-size: 12px;}
+.course-sidebar .course-body .accordion .chkmark{border-width: 2px; border-color: #000; border-radius: 0; height: 18px !important; width: 18px;}
+.course-sidebar .course-body .accordion .common-chkbox{padding-left: 28px; font-size: 14px; color: #000; line-height: 18px;}
+.course-sidebar .course-body .accordion .common-chkbox input:checked ~ .chkmark{background-color: #000; border-color: #000;}
+.course-sidebar .course-body .accordion .common-chkbox .chkmark:after{left: 5px; top: 0px; width: 5px; border-width: 0 1px 1px 0; height: 11px;}
+.course-sidebar .course-body .accordion .accordion-body ul li:not(:last-child){padding-bottom: 14px;}
+.course-sidebar .course-body .accordion .accordion-body ul li span{font-size: 12px; line-height: 18px;}
+.course-sidebar .course-body .accordion .accordion-body ul li i{font-size: 18px; line-height: 17px; vertical-align: middle;}
+.course-sidebar .course-body .accordion .accordion-button::after{content: "\e924"; font-family: 'icomoon-dashboard' !important; speak: never; font-style: normal; font-weight: normal;
+    font-variant: normal; text-transform: none; font-size: 18px; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; right: 15px;}
+.course-sidebar .course-body .accordion .accordion-button:not(.collapsed)::after{-webkit-transform: rotate(180deg) translateY(50%);-ms-transform: rotate(180deg) translateY(50%);transform: rotate(180deg) translateY(50%);}
+
 
 /*=== Start Footer CSS ===*/
 footer .main-footer{background-color: #082758; padding: 35px 10px;}

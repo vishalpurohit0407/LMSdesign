@@ -49,6 +49,7 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-select": "^5.7.2",
+    "react-show-more-button": "^1.0.0",
     "react-simple-maps": "^3.0.0",
     "react-sparklines": "^1.7.0",
     "react-stepper": "^1.0.15",
